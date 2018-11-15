@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Anastasia Sitnikova](https://up.htmlacademy.ru/htmlcss/23/user/96352).
-* Наставник: `Неизвестно`.
+* Наставник: [Магомед Кандаев](https://htmlacademy.ru/profile/magomedkandaev).
 
 ---
 
