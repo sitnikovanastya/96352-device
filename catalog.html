@@ -55,12 +55,36 @@
     <div class="content-container">
       <section class="filter">
         <h2 class="filter__header">Фильтр:</h2>
-        <!-- Здесь будут фильтры -->
+        <div class="filter-cost">
+          <h3>Стоимость</h3>
+        </div>
+        <div class="filter-color">
+          <h3>Цвет</h3>
+          <ul class="filter-color-list">
+            <li class="filter-color-list__item--filled">Черный</li>
+            <li class="filter-color-list__item">Белый</li>
+            <li class="filter-color-list__item--filled">Синий</li>
+            <li class="filter-color-list__item--filled">Красный</li>
+            <li class="filter-color-list__item">Розовый</li>
+          </ul>
+        </div>
+        <div class="filter-bluetooth">
+          <h3>Bluetooth</h3>
+          <ul class="filter-bluetooth-list">
+            <li class="filter-bluetooth-list__item--filled">Есть</li>
+            <li class="filter-bluetooth-list__item">Нет</li>
+          </ul>
+        </div>
+        <a class="button" href="#">Показать</a>
       </section>
 
       <section class="catalog">
         <h2 class="catalog__header">Сортировка:</h2>
-        <!-- Здесь будетт фильтр -->
+        <ul class="catalog-list">
+          <li class="catalog-list__item--current"><a href="index.html">По цене</a></li>
+          <li class="catalog-list__item"><a href="index.html">По типу</a></li>
+          <li class="catalog-list__item"><a href="index.html">По популярности</a></li>
+        </ul>
 
         <ul class="catalog-list">
           <li class="catalog-list__item">
@@ -128,6 +152,16 @@
           </li>
         </ul>
       </section>
+    </div>
+
+    <div class="catalog-pagination">
+      <ul class="catalog-pagination-list">
+        <li class="catalog-pagination-list__item">Назад</li>
+        <li class="catalog-pagination-list__item--current">1</li>
+        <li class="catalog-pagination-list__item">2</li>
+        <li class="catalog-pagination-list__item">3</li>
+        <li class="catalog-pagination-list__item">Вперед</li>
+      </ul>
     </div>
   </main>
 
