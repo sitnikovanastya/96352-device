@@ -6,10 +6,16 @@
 </head>
 <body>
   <header class="main-header">
-    <h1><a class="main-header__logo logo">DEVICE</a></h1>
+    <h1><a class="main-header__logo logo" href="index.html">DEVICE</a></h1>
+    <nav class="user-nav" aria-label="Навгация пользователя">
 
-    <nav class="user-nav">
-      <span class="user-nav__search">Поиск по сайту</span>
+      <form action="https://echo.htmlacademy.ru/" method="get">
+        <p>
+          <input type="search" name="search" class="user-nav__search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+        </p>
+        <button type="submit">Найти</button>
+      </form>
+
       <div class="nav-list-wrapper">
         <ul class="user-nav__list nav-list">
           <li class="nav-list__item">Войти</li>
@@ -20,7 +26,7 @@
         </ul>
       </div>
     </nav>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Навигация по сайту">
       <ul class="main-nav__list main-list">
         <li class="main-list__item">
           <a href="catalog.html">Каталог товаров</a>
@@ -51,41 +57,76 @@
 
     <div class="catalog-wapper">
       <div class="filter-wrapper">
-        <section class="filter">
-          <h2 class="filter__header">Фильтр:</h2>
-          <div class="filter__cost cost">
+        <section class="filters">
+          <h2 class="filters__header">Фильтр:</h2>
+          <div class="filters__cost cost">
             <h3>Стоимость</h3>
+            <div class="cost__toggle cost__toggle">
+              <button type="button" name="button" aria-label="Минимальное значение"></button>
+              <span>От 0</span>
+            </div>
+            <div class="cost__toggle cost__toggle cost__toggle--max">
+              <button type="button" name="button" aria-label="Максимальное значение"></button>
+              <span>До 5 000</span>
+            </div>
           </div>
-          <div class="filter__color color">
-            <h3>Цвет</h3>
-            <ul class="color__list color-list">
-              <li class="color-list__item--filled">Черный</li>
-              <li class="color-list__item">Белый</li>
-              <li class="color-list__item--filled">Синий</li>
-              <li class="color-list__item--filled">Красный</li>
-              <li class="color-list__item">Розовый</li>
-            </ul>
-          </div>
-          <div class="filter__bluetooth bluetooth">
-            <h3>Bluetooth</h3>
-            <ul class="bluetooth__list bluetooth-list">
-              <li class="bluetooth-list__item--filled">Есть</li>
-              <li class="bluetooth-list__item">Нет</li>
-            </ul>
-          </div>
-          <a class="button" href="#">Показать</a>
+
+          <form class="filters__form filters-form" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset class="filters-form__color color">
+              <legend>Цвет</legend>
+              <ul class="color__list color-list">
+                <li class="color-list__item color-input">
+                  <input class="visually-hidden color-input__checkbox" type="checkbox" name="black" id="black" checked>
+                  <label for="black">Черный</label>
+                </li>
+                <li class="color-list__item">
+                  <input class="visually-hidden color-input__checkbox" type="checkbox" name="white" id="white">
+                  <label for="white">Белый</label>
+                </li>
+                <li class="color-list__item">
+                  <input class="visually-hidden color-input__checkbox" type="checkbox" name="blue" id="blue" checked>
+                  <label for="blue">Синий</label>
+                </li>
+                <li class="color-list__item">
+                  <input class="visually-hidden color-input__checkbox" type="checkbox" name="red" id="red" checked>
+                  <label for="red">Красный</label>
+                </li>
+                <li class="color-list__item">
+                  <input class="visually-hidden color-input__checkbox" type="checkbox" name="pink" id="pink">
+                  <label for="pink">Розовый</label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="filters-form__bluetooth bluetooth">
+              <legend>Bluetooth</legend>
+              <ul class="bluetooth__list bluetooth-list">
+                <li class="bluetooth-list__item">Есть
+                  <input class="visually-hidden" type="radio" name="with-bluetooth" id="with-bluetooth" checked>
+                  <label for="with-bluetooth"></label>
+                </li>
+                <li class="bluetooth-list__item">Нет
+                  <input class="visually-hidden" type="radio" name="without-bluetooth" id="without-bluetooth">
+                  <label for="without-bluetooth"></label>
+                </li>
+              </ul>
+              <a class="button" href="#">Показать</a>
+            </fieldset>
+          </form>
         </section>
       </div>
 
       <section class="catalog">
         <h2 class="catalog__header">Сортировка:</h2>
-        <nav class="catalog__nav sorting-nav">
+        <div class="catalog__nav sorting-nav">
           <ul class="sorting-nav__list sorting-list">
             <li class="sorting-list__item--current"><a href="index.html">По цене</a></li>
             <li class="sorting-list__item"><a href="index.html">По типу</a></li>
             <li class="sorting-list__item"><a href="index.html">По популярности</a></li>
           </ul>
-        </nav>
+          <button type="button" class="sorting-list__button" aria-label="От меньшего к большему"></button>
+          <button type="button" class="sorting-list__button--max-to-min" aria-label="От большего к меньшему"></button>
+        </div>
 
         <div class="products">
           <ul class="products__list products-catalog">
@@ -102,6 +143,8 @@
                 <p class="product-info__price">
                   <b>500 руб.</b>
                 </p>
+                <a href="#" class="product-info__button button">В корзину</a>
+                <a href="#" class="product-info__compare">Добавить к сравнению</a>
               </div>
             </li>
 
@@ -118,6 +161,8 @@
                 <p class="product-info__price">
                   <b>1 500 руб.</b>
                 </p>
+                <a href="#" class="product-info__button button">В корзину</a>
+                <a href="#" class="product-info__compare">Добавить к сравнению</a>
               </div>
             </li>
 
@@ -134,6 +179,8 @@
                 <p class="product-info__price">
                   <b>2 500 руб.</b>
                 </p>
+                <a href="#" class="product-info__button button">В корзину</a>
+                <a href="#" class="product-info__compare">Добавить к сравнению</a>
               </div>
             </li>
 
@@ -150,6 +197,8 @@
                 <p class="product-info__price">
                   <b>4 900 руб.</b>
                 </p>
+                <a href="#" class="product-info__button button">В корзину</a>
+                <a href="#" class="product-info__compare">Добавить к сравнению</a>
               </div>
             </li>
           </ul>
@@ -158,11 +207,21 @@
 
       <div class="catalog-pagination">
         <ul class="catalog-pagination__list pagination-list">
-          <li class="pagination-list__item">Назад</li>
-          <li class="pagination-list__item--current">1</li>
-          <li class="pagination-list__item">2</li>
-          <li class="pagination-listt__item">3</li>
-          <li class="pagination-list__item">Вперед</li>
+          <li class="pagination-list__item">
+            <a href="#">Назад</a>
+          </li>
+          <li class="pagination-list__item--current">
+            <a href="#">1</a>
+          </li>
+          <li class="pagination-list__item">
+            <a href="#">2</a>
+          </li>
+          <li class="pagination-listt__item">
+            <a href="#">3</a>
+          </li>
+          <li class="pagination-list__item">
+            <a href="#">Вперед</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -193,9 +252,9 @@
 
     <div class="page-footer__social social">
       <ul class="social__list social-button">
-        <li><a class="social-button__item" href="#">Facebook</a></li>
-        <li><a class="social-button__item" href="#">Instagram</a></li>
-        <li><a class="social-button__item" href="#">Twitter</a></li>
+        <li><a class="social-button__item" href="#" aria-label="Аккаунт Device на Facebook">Facebook</a></li>
+        <li><a class="social-button__item" href="#" aria-label="Аккаунт Device в Instagram">Instagram</a></li>
+        <li><a class="social-button__item" href="#" aria-label="Аккаунт Device в Twitter">Twitter</a></li>
       </ul>
     </div>
   </footer>

@@ -8,7 +8,14 @@
   <header class="main-header">
     <h1><a class="main-header__logo logo">DEVICE</a></h1>
     <nav class="user-nav">
-      <span class="user-nav__search">Поиск по сайту</span>
+
+      <form action="https://echo.htmlacademy.ru/" method="get">
+        <p>
+          <input type="search" name="search" class="user-nav__search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+        </p>
+        <button type="submit">Найти</button>
+      </form>
+
       <div class="nav-list-wrapper">
         <ul class="user-nav__list nav-list">
           <li class="nav-list__item">Войти</li>
@@ -205,9 +212,9 @@
 
           <div class="page-footer__social social">
             <ul class="social__list social-button">
-              <li><a class="social-button__item" href="#">Facebook</a></li>
-              <li><a class="social-button__item" href="#">Instagram</a></li>
-              <li><a class="social-button__item" href="#">Twitter</a></li>
+              <li><a class="social-button__item" href="#" aria-label="Аккаунт Device на Facebook">Facebook</a></li>
+              <li><a class="social-button__item" href="#" aria-label="Аккаунт Device в Instagram">Instagram</a></li>
+              <li><a class="social-button__item" href="#" aria-label="Аккаунт Device в Twitter">Twitter</a></li>
             </ul>
           </div>
         </footer>
