@@ -11,18 +11,19 @@
 
       <form action="https://echo.htmlacademy.ru/" method="get">
         <p>
-          <input type="search" name="search" class="user-nav__search" placeholder="Поиск по сайту" aria-label="Поиск по сайту">
+          <input type="search" name="search" class="user-nav__search" placeholder="Поиск по сайту" id="search">
+          <label for="search" class="visually-hidden">Поиск по сайту</label>
         </p>
         <button type="submit">Найти</button>
       </form>
 
       <div class="nav-list-wrapper">
         <ul class="user-nav__list nav-list">
-          <li class="nav-list__item">Войти</li>
+          <li class="nav-list__item"><a href="#">Войти</a></li>
         </ul>
         <ul class="user-nav__list nav-list">
-          <li class="nav-list__item">Сравнить</li>
-          <li class="nav-list__item">Корзина</li>
+          <li class="nav-list__item"><a href="#">Сравнить</a></li>
+          <li class="nav-list__item"><a href="#">Корзина</a></li>
         </ul>
       </div>
     </nav>
@@ -219,5 +220,41 @@
           </div>
         </footer>
 
+        <section class="modal modal-сontact">
+          <h2 class="visually-hidden">Напиште нам</h2>
+          <form class="modal-contact__form contact-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label for="name">Ваше имя:</label>
+              <input class="contact-form__text" id="name" type="text" placeholder="Имя Фамилия">
+            </p>
+            <p>
+              <label for="email">Ваш e-mail:</label>
+              <input class="contact-form__text" id="email" type="text" placeholder="email@example.com">
+            </p>
+            <p>
+              <label for="text">Текст письма:</label>
+              <textarea class="contact-form__text" id="text" placeholder="В свободной форме"></textarea>
+            </p>
+            <button class="contact-form__button button" type="submit">
+              Отправить
+            </button>
+
+            <button class="contact-form__close modal-close" type="button">
+              Закрыть
+            </button>
+          </form>
+        </section>
+
+        <section class="modal modal-map">
+          <h2 class="visually-hidden">
+            Как до нас добраться
+          </h2>
+          <p>
+            <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу ул. Строителей, Санкт-Петербург">
+          </p>
+          <button class="modal-map_close modal-close" type="button">
+            Закрыть
+          </button>
+        </section>
       </body>
       </html>
