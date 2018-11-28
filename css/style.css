@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "gilroyextrabold";
+  src: url("../fonts/gilroyextrabold-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gilroylight";
+  src: url("../fonts/gilroylight-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 30px;
+  font-size: 15px;
+  color: #464646;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.modal {
+  display: none;
+}
+
+.logo {
+  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  color: #00000;
+  letter-spacing: 0.48px;
+}
+
+.user-nav {
+  background: #f7e296;
+}
+
+.search__input {
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.15px;
+  background: #f7e296;
+  border: 0;
+  opacity: 0.3;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.main-nav {
+  background: #f7e296;
+}
+
+.main-list{
+  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: black;
+  text-transform: uppercase;
+  list-style: none;
+  letter-spacing: 3.6px;
+}
+
+.catalog-list {
+  list-style: none;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 36px;
+  font-size: 15px;
+  color: #000000;
+  letter-spacing: 0.15px;
+  text-transform: none;
+}
+
+.content-title {
+  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  letter-spacing: 0.48px;
+  color: #000000;
+}
+
+.transport-list {
+  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  letter-spacing: 0.48px;
+  color: #000000;
+}
+
+.button {
+  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 3.6px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.page-footer {
+  background: #464646;
+}
+
+.page-footer a:not(.logo--footer) {
+  color: #ffffff;
+}
+
+.logo--footer {
+  color: #ffc600;
+}
+
+.user-nav--footer {
+  background: #464646;
+}
+
+.main-list--footer {
+  background: #464646;
+}
+
+.page-footer__contacts {
+  color: #ffffff;
+}
+
+.page-footer__user-nav a:not(:first-child) {
+  color: rgba(255,255,255,0.3)
+}
+
+.breadcrumbs,
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0,0,0,0.3);
+  list-style: none;
+}
+
+.content-subtitle {
+  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #000000;
+}
+
+.products-catalog {
+  list-style: none;
+}
+
+.color {
+  border: 0;
+}
+
+.bluetooth {
+  border: 0;
+}
+
+.color-list {
+  list-style: none;
+}
+
+.bluetooth-list {
+  list-style: none;
+}
+
+.product-info__price {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+
+.product-info__compare {
+  font-size: 13px;
+  color: rgba(0,0,0,0.5);
+}
+
+.filters {
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.15px;
+}

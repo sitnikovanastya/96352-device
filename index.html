@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
     <h1><a class="main-header__logo logo">DEVICE</a></h1>
     <nav class="user-nav">
 
-      <form action="https://echo.htmlacademy.ru/" method="get">
+      <form action="https://echo.htmlacademy.ru/" method="get" class="user-nav__search search">
         <p>
-          <input type="search" name="search" class="user-nav__search" placeholder="Поиск по сайту" id="search">
+          <input class="search__input" type="search" name="search" class="user-nav__search" placeholder="Поиск по сайту" id="search">
           <label for="search" class="visually-hidden">Поиск по сайту</label>
         </p>
         <button type="submit">Найти</button>
@@ -27,7 +30,7 @@
         </ul>
       </div>
     </nav>
-    
+
     <nav class="main-nav">
       <ul class="main-nav__list main-list">
         <li class="main-list__item">
@@ -155,7 +158,7 @@
                 </ul>
               </nav>
 
-              <h2>Доставка</h2>
+              <h2 class="delivery-nav__header content-title">Доставка</h2>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </div>
           </section>
@@ -180,7 +183,7 @@
 
           <div class="info-wrapper">
             <section class="about">
-              <h2>О нас</h2>
+              <h2 class="about__header content-title">О нас</h2>
               <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
               <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 
@@ -193,7 +196,7 @@
             </section>
 
             <section class="contacts">
-              <h2>Контакты</h2>
+              <h2 class="contacts__header content-title">Контакты</h2>
               <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
               <div class="map">
                 <img src="img/map.jpg" width="560" height="222" alt="Карта">
@@ -204,9 +207,9 @@
         </main>
 
         <footer class="page-footer">
-          <a class="page-footer__logo logo">DEVICE</a>
+          <a class="page-footer__logo logo logo--footer">DEVICE</a>
 
-          <nav class="page-footer__user-nav user-nav">
+          <nav class="page-footer__user-nav user-nav user-nav--footer">
             <ul class="user-nav__list nav-list">
               <li class="nav-list__item--footer"><a href="#">Войти</a></li>
               <li class="nav-list__item--footer"><a href="#">Стравнить</a></li>
@@ -214,10 +217,10 @@
             </ul>
           </nav>
 
-          <div class="footer-nav-wrapper">
-            <p class="footer__contacts">г. Москва, ул. Строителей, 15</p>
-            <nav class="footer__main-nav">
-              <ul class="main-nav__list main-nav">
+          <div class="page-footer-nav-wrapper">
+            <p class="page-footer__contacts">г. Москва, ул. Строителей, 15</p>
+            <nav class="page-footer__main-nav">
+              <ul class="main-nav__list main-list main-list--footer">
                 <li class="main-nav__item--footer"><a href="#">Доставка</a></li>
                 <li class="main-nav__item--footer"><a href="#">Гарантия</a></li>
                 <li class="main-nav__item--footer"><a href="#">Контакты</a></li>
