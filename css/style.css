@@ -50,21 +50,53 @@ a {
   letter-spacing: 0.48px;
 }
 
+.logo:hover {
+  color: rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+
+.logo:active {
+  color: rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
 .user-nav {
   background: #f7e296;
 }
 
 .search__input {
-  color: rgba(0, 0, 0, 0.3);
+  color: #000000;
   letter-spacing: 0.15px;
   background: #f7e296;
   border: 0;
   opacity: 0.3;
 }
 
+.search__input:hover{
+  opacity: 0.6;
+}
+
+.search__input:active,
+.search__input:focus {
+  opacity: 1;
+}
+
 .nav-list {
   list-style: none;
 }
+
+.nav-list__item a:hover,
+.main-list__item a:hover {
+  color: rgba(0,0,0,0.6);
+}
+
+.nav-list__item a:active,
+.nav-list__item a:focus,
+.main-list__item a:active,
+.main-list__item a:focus {
+  color: rgba(0,0,0,0.3);
+}
+
 
 .main-nav {
   background: #f7e296;
@@ -108,24 +140,79 @@ a {
 }
 
 .button {
+  position: relative;
   font-family: "gilroyextrabold", Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 40px;
   letter-spacing: 3.6px;
   color: #000000;
   text-transform: uppercase;
+  padding: 10px 43px;
+  min-width: 190px;
+  max-width: 260px;
+}
+
+.button:hover {
+  background: #ffc600;
+}
+
+.button:focus,
+.button:active {
+  background: #ffc600;
+  color: rgba(0,0,0,0.3);
+}
+
+.button::after {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  content: "";
+  border: 4px solid #ffc600;
+  z-index: -1;
+
 }
 
 .page-footer {
   background: #464646;
 }
 
-.page-footer a:not(.logo--footer) {
+.user-nav--footer a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.user-nav--footer a:hover {
+  color: rgba(255, 255, 255, 1);
+}
+.user-nav--footer a:focus,
+.user-nav--footer a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-list__item--footer a{
   color: #ffffff;
+}
+
+.main-list__item--footer a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.main-list__item--footer a:focus,
+.main-list__item--footer a:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .logo--footer {
   color: #ffc600;
+}
+
+.logo--footer:hover {
+  color: rgba(255,190,0,0.6);
+  cursor: pointer;
+}
+
+.logo--footer:active {
+  color: rgba(255,190,0,0.3);
+  cursor: pointer;
 }
 
 .user-nav--footer {
@@ -138,10 +225,6 @@ a {
 
 .page-footer__contacts {
   color: #ffffff;
-}
-
-.page-footer__user-nav a:not(:first-child) {
-  color: rgba(255,255,255,0.3)
 }
 
 .breadcrumbs,
@@ -189,6 +272,15 @@ a {
 .product-info__compare {
   font-size: 13px;
   color: rgba(0,0,0,0.5);
+}
+
+.product-info__compare:hover {
+  color: rgba(0,0,0,1);
+}
+
+.product-info__compare:active,
+.product-info__compare:focus {
+  color: rgba(0,0,0,0.2);
 }
 
 .filters {
