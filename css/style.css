@@ -13,14 +13,11 @@
 }
 
 .visually-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding:0 !important;
-  border:0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 body {
@@ -46,8 +43,8 @@ a {
   font-family: "gilroyextrabold", Helvetica, sans-serif;
   font-size: 48px;
   line-height: 48px;
-  color: #00000;
-  letter-spacing: 0.48px;
+  color: #000000;
+  letter-spacing: 0.01em;
 }
 
 .logo:hover {
@@ -66,7 +63,7 @@ a {
 
 .search__input {
   color: #000000;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.01em;
   background: #f7e296;
   border: 0;
   opacity: 0.3;
@@ -109,7 +106,7 @@ a {
   color: black;
   text-transform: uppercase;
   list-style: none;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
 }
 
 .catalog-list {
@@ -119,7 +116,7 @@ a {
   line-height: 36px;
   font-size: 15px;
   color: #000000;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.01em;
   text-transform: none;
 }
 
@@ -127,7 +124,7 @@ a {
   font-family: "gilroyextrabold", Helvetica, sans-serif;
   font-size: 47px;
   line-height: 48px;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.01em;
   color: #000000;
 }
 
@@ -135,7 +132,7 @@ a {
   font-family: "gilroyextrabold", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 40px;
-  letter-spacing: 0.48px;
+  letter-spacing: 0.01em;
   color: #000000;
 }
 
@@ -144,7 +141,7 @@ a {
   font-family: "gilroyextrabold", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 40px;
-  letter-spacing: 3.6px;
+  letter-spacing: 0.2em;
   color: #000000;
   text-transform: uppercase;
   padding: 10px 43px;
@@ -227,6 +224,7 @@ a {
   color: #ffffff;
 }
 
+
 .breadcrumbs,
 .breadcrumbs a {
   font-size: 14px;
@@ -235,11 +233,20 @@ a {
   list-style: none;
 }
 
+.breadcrumbs a:hover {
+  color: rgba(0,0,0,0.6);
+}
+
+.breadcrumbs a:active,
+.breadcrumbs a:focus {
+  color: rgba(0,0,0,0.1);
+}
+
 .content-subtitle {
   font-family: "gilroyextrabold", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.02em;
   color: #000000;
 }
 
@@ -266,7 +273,7 @@ a {
 .product-info__price {
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.01em;
 }
 
 .product-info__compare {
@@ -286,5 +293,16 @@ a {
 .filters {
   font-size: 14px;
   line-height: 40px;
-  letter-spacing: 0.15px;
+  letter-spacing: 0.01em;
+}
+
+.filters__header,
+.catalog__header {
+  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
 }
