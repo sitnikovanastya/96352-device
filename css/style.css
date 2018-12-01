@@ -1,28 +1,31 @@
 @font-face {
-  font-family: "gilroyextrabold";
-  src: url("../fonts/gilroyextrabold-webfont.woff2") format("woff2");
+  font-family: 'gilroyextrabold';
+  src: url("../fonts/gilroyextrabold-webfont.woff2") format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "gilroylight";
-  src: url("../fonts/gilroylight-webfont.woff2") format("woff2");
+  font-family: 'gilroylight';
+  src: url("../fonts/gilroylight-webfont.woff2") format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 .visually-hidden {
   position: absolute;
+  overflow: hidden;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 body {
   margin: 0;
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-weight: 300;
   line-height: 30px;
   font-size: 15px;
@@ -35,12 +38,47 @@ a {
   color: black;
 }
 
+.button {
+  position: relative;
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 40px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 10px 43px;
+  min-width: 190px;
+  max-width: 260px;
+}
+
+.button:hover {
+  background: #ffc600;
+}
+
+.button:focus,
+.button:active {
+  background: #ffc600;
+  color: rgba(0,0,0,0.3);
+}
+
+.button::after {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  content: "";
+  border: 4px solid #ffc600;
+  z-index: -1;
+}
+
 .modal {
   display: none;
 }
 
+/*Главная страница*/
+/*Header*/
 .logo {
-  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 48px;
   line-height: 48px;
   color: #000000;
@@ -94,13 +132,12 @@ a {
   color: rgba(0,0,0,0.3);
 }
 
-
 .main-nav {
   background: #f7e296;
 }
 
 .main-list{
-  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: black;
@@ -111,7 +148,7 @@ a {
 
 .catalog-list {
   list-style: none;
-  font-family: "Open Sans", Helvetica, sans-serif;
+  font-family: 'Open Sans', Helvetica, sans-serif;
   font-weight: 300;
   line-height: 36px;
   font-size: 15px;
@@ -120,56 +157,107 @@ a {
   text-transform: none;
 }
 
+/*Слайдер*/
+.slider__title {
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
+  font-size: 47px;
+  line-height: 56px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.description__spec td{
+  font-family: 'gilroylight', Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: 48px;
+  color: #000000;
+}
+
+.description__spec th{
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #464646;
+}
+
+.switchers {
+  list-style: none;
+}
+
 .content-title {
-  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 47px;
   line-height: 48px;
   letter-spacing: 0.01em;
   color: #000000;
 }
 
+/*Горизонтальный каталог - иконки*/
+.catalog-row {
+  list-style: none;
+}
+
+.catalog-row__item a{
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.catalog-row__item a:focus,
+.catalog-row__item a:active
+{
+  color: rgba(0,0,0,0.3);
+}
+
+/*Сервис*/
+.service-list{
+  list-style: none;
+}
+
+.service {
+  background-color: #e5e5e5;
+}
+
+.button--service:active,
+.button--service:focus
+ {
+  background-color: #000000;
+  color: #f7e184;
+}
+
 .transport-list {
-  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 40px;
   letter-spacing: 0.01em;
   color: #000000;
 }
 
-.button {
-  position: relative;
-  font-family: "gilroyextrabold", Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: 40px;
-  letter-spacing: 0.2em;
-  color: #000000;
-  text-transform: uppercase;
-  padding: 10px 43px;
-  min-width: 190px;
-  max-width: 260px;
+/*Партнеры*/
+.partners-logo {
+  list-style: none;
 }
 
-.button:hover {
-  background: #ffc600;
+.partners-logo__item--gji img:hover {
+  background: url("../img/logo-dji.jpg");
 }
 
-.button:focus,
-.button:active {
-  background: #ffc600;
-  color: rgba(0,0,0,0.3);
+.partners-logo__item--spadgets img:hover {
+  background: url("../img/logo-spadgets.jpg");
 }
 
-.button::after {
-  position: absolute;
-  top: 40%;
-  right: 0;
-  left: 0;
-  content: "";
-  border: 4px solid #ffc600;
-  z-index: -1;
-
+.partners-logo__item--gopro img:hover {
+  background: url("../img/logo-gopro.jpg");
 }
 
+.partners-logo__item--vive img:hover {
+  background: url("../img/logo-vive.jpg");
+}
+
+/*Footer*/
 .page-footer {
   background: #464646;
 }
@@ -224,6 +312,7 @@ a {
   color: #ffffff;
 }
 
+/*Страница каталога*/
 
 .breadcrumbs,
 .breadcrumbs a {
@@ -242,8 +331,10 @@ a {
   color: rgba(0,0,0,0.1);
 }
 
+/*Карточка товаров*/
+
 .content-subtitle {
-  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -253,6 +344,12 @@ a {
 .products-catalog {
   list-style: none;
 }
+
+.product-info:hover .product-info-container{
+  display:block;
+}
+
+/*Фильтры*/
 
 .color {
   border: 0;
@@ -298,11 +395,103 @@ a {
 
 .filters__header,
 .catalog__header {
-  font-family: "gilroyextrabold", Helvetica, sans-serif;
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: black;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 
+}
+
+.cost__value {
+  font-family: 'gilroylight', Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0,0,0,0.2);
+}
+
+.filters__form label {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 300;
+  line-height: 40px;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0.01em;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-list__item a{
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-weight: 300;
+  line-height:18px;
+  font-size: 14px;
+  color: rgba(0,0,0,0.3);
+}
+
+.sorting-list__item a:hover{
+  color: rgba(0,0,0,0.6);
+}
+
+.sorting-list__item a:active,
+.sorting-list__item a:focus
+{
+  color: rgba(0,0,0,0.1);
+}
+
+.sorting-list__item--current a{
+  color: rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+/*Пагинация товаров*/
+.pagination-list {
+  list-style: none;
+  background-color: rgba(235,235,235,0.8)
+}
+
+.pagination-list__item a{
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(0,0,0,0.3);
+}
+
+.pagination-list__item a:hover{
+  color: rgba(0,0,0,0.6);
+}
+
+.pagination-list__item a:focus,
+.pagination-list__item a:active
+{
+  color: #000000;
+}
+
+.pagination-list__item--current a{
+  color: #000000;
+  pointer-events: none;
+}
+
+.pagination-list__more a{
+  font-family: 'gilroyextrabold', Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #000000;
+}
+
+.pagination-list__more a:hover{
+  background-color: #d9d9d9;
+}
+
+.pagination-list__more a:focus,
+.pagination-list__more a:active
+{
+  color: rgba(0,0,0,0.3);
 }
