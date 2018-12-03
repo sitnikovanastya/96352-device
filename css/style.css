@@ -129,13 +129,11 @@ a {
 .user-nav-wrapper{
   display: flex;
   width: 100%;
-  flex-direction: row;
 }
 
 .user-nav {
   background: #f7e296;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -147,12 +145,10 @@ a {
 
 .nav-list-wrapper {
   display: flex;
-  flex-direction: row;
 }
 
 .nav-list {
   display: flex;
-  flex-direction: row;
     list-style: none;
 }
 
@@ -182,7 +178,6 @@ a {
 
 .main-list{
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 18px;
@@ -195,7 +190,6 @@ a {
 
 .catalog-list {
   display: flex;
-  flex-direction: row;
   list-style: none;
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-weight: 300;
@@ -318,7 +312,6 @@ a {
 
 .info-wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding-bottom: 90px;
 }
@@ -333,19 +326,16 @@ a {
 
 .page-footer-user-nav-wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
 .page-footer-main-nav-wrapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
 .main-list--footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   min-width: 440px;
 }
@@ -407,7 +397,6 @@ a {
 
 .social-button {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   min-width: 160px;
   max-width: 440px;
@@ -417,7 +406,6 @@ a {
 
 .breadcrumbs {
   display: flex;
-  flex-direction: row;
 }
 
 .breadcrumbs,
@@ -441,7 +429,6 @@ a {
 
 .catalog-wapper {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 100%;
 }
@@ -452,12 +439,10 @@ a {
 
 .sorting-wrapper {
   display: flex;
-  flex-direction: row;
 }
 
 .sorting-list {
   display: flex;
-  flex-direction: row;
 }
 
 .sorting-list__item {
@@ -475,7 +460,6 @@ a {
 .products-catalog {
   list-style: none;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
 }
@@ -589,7 +573,6 @@ a {
 /*Пагинация товаров*/
 .pagination-list {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   list-style: none;
   background-color: rgba(235,235,235,0.8)
