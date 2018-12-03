@@ -31,6 +31,7 @@ body {
   font-size: 15px;
   color: #464646;
   background: white;
+  min-width: 1200px;
 }
 
 a {
@@ -95,16 +96,23 @@ a {
   cursor: pointer;
 }
 
-.user-nav {
-  background: #f7e296;
-}
-
+/*Поиск*/
 .search__input {
   color: #000000;
   letter-spacing: 0.01em;
   background: #f7e296;
+
+}
+
+.user-nav__search {
+  width: 335px;
+  height: 49px;
+  color: #000000;
+  background-color: #f7e296;
+}
+
+.search__input {
   border: 0;
-  opacity: 0.3;
 }
 
 .search__input:hover{
@@ -116,8 +124,40 @@ a {
   opacity: 1;
 }
 
+/*Навигация пользователя*/
+
+.user-nav-wrapper{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.user-nav {
+  background: #f7e296;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.user-nav-container {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 .nav-list {
-  list-style: none;
+  display: flex;
+  flex-direction: row;
+    list-style: none;
+}
+
+.nav-list__item {
+  min-width: 100px;
 }
 
 .nav-list__item a:hover,
@@ -132,11 +172,18 @@ a {
   color: rgba(0,0,0,0.3);
 }
 
+/*Навигация по каталогу товаров*/
+
 .main-nav {
   background: #f7e296;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -147,6 +194,8 @@ a {
 }
 
 .catalog-list {
+  display: flex;
+  flex-direction: row;
   list-style: none;
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-weight: 300;
@@ -155,6 +204,14 @@ a {
   color: #000000;
   letter-spacing: 0.01em;
   text-transform: none;
+}
+
+.catalog-list ul {
+  list-style-type: none;
+}
+
+.catalog-list__item{
+  min-width: 200px;
 }
 
 /*Слайдер*/
@@ -223,7 +280,7 @@ a {
 
 .button--service:active,
 .button--service:focus
- {
+{
   background-color: #000000;
   color: #f7e184;
 }
@@ -257,9 +314,40 @@ a {
   background: url("../img/logo-vive.jpg");
 }
 
+/*Информация о нас*/
+
+.info-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 90px;
+}
+
+
 /*Footer*/
 .page-footer {
+  display: flex;
+  flex-direction: column;
   background: #464646;
+}
+
+.page-footer-user-nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.page-footer-main-nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-list--footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 440px;
 }
 
 .user-nav--footer a {
@@ -312,7 +400,25 @@ a {
   color: #ffffff;
 }
 
+.page-footer__social {
+  display: flex;
+  justify-content: center;
+}
+
+.social-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 160px;
+  max-width: 440px;
+}
+
 /*Страница каталога*/
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+}
 
 .breadcrumbs,
 .breadcrumbs a {
@@ -333,6 +439,31 @@ a {
 
 /*Карточка товаров*/
 
+.catalog-wapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.catalog {
+  flex-grow: 1;
+}
+
+.sorting-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.sorting-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.sorting-list__item {
+  margin-left: 30px;
+}
+
 .content-subtitle {
   font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 18px;
@@ -343,6 +474,10 @@ a {
 
 .products-catalog {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .product-info:hover .product-info-container{
@@ -350,6 +485,10 @@ a {
 }
 
 /*Фильтры*/
+
+.filters {
+  width: 470px;
+}
 
 .color {
   border: 0;
@@ -449,6 +588,9 @@ a {
 
 /*Пагинация товаров*/
 .pagination-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   list-style: none;
   background-color: rgba(235,235,235,0.8)
 }

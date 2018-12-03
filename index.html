@@ -10,45 +10,62 @@
 <body>
   <header class="main-header">
     <h1><a class="main-header__logo logo">DEVICE</a></h1>
-    <nav class="user-nav">
-      <form action="https://echo.htmlacademy.ru/" method="get" class="user-nav__search search">
-        <p>
-          <input class="search__input" type="search" name="search" class="user-nav__search" placeholder="Поиск по сайту" id="search">
-          <label for="search" class="visually-hidden">Поиск по сайту</label>
-        </p>
-        <button type="submit">Найти</button>
-      </form>
+    <div class="user-nav-wrapper">
+      <div class="user-nav-container">
+        <nav class="user-nav">
+          <form action="https://echo.htmlacademy.ru/" method="get" class="user-nav__search search">
+            <p>
+              <input class="search__input" type="search" name="search" placeholder="Поиск по сайту" id="search">
+              <label for="search" class="visually-hidden">Поиск по сайту</label>
+            </p>
+            <button type="submit" class="visually-hidden">Найти</button>
+          </form>
 
-      <div class="nav-list-wrapper">
-        <ul class="user-nav__list nav-list">
-          <li class="nav-list__item"><a href="#">Войти</a></li>
-        </ul>
-        <ul class="user-nav__list nav-list">
-          <li class="nav-list__item"><a href="#">Сравнить</a></li>
-          <li class="nav-list__item"><a href="#">Корзина</a></li>
-        </ul>
-      </div>
-    </nav>
+          <div class="nav-list-wrapper">
+            <ul class="user-nav__list nav-list">
+              <li class="nav-list__item"><a href="#">Войти</a></li>
+            </ul>
+            <ul class="user-nav__list nav-list">
+              <li class="nav-list__item"><a href="#">Сравнить</a></li>
+              <li class="nav-list__item"><a href="#">Корзина</a></li>
+            </ul>
+          </div>
+        </nav>
 
-    <nav class="main-nav">
-      <ul class="main-nav__list main-list">
-        <li class="main-list__item">
-          <a href="catalog.html">Каталог товаров</a>
-          <!-- Выпадающее меню -->
-          <ul class="catalog-list">
-            <li class="catalog-list__item"><a href="#">Виртуальная реальность</a></li>
-            <li class="catalog-list__item"><a href="#">Моноподы для селфи</a></li>
-            <li class="catalog-list__item"><a href="#">Экшен-камеры</a></li>
-            <li class="catalog-list__item"><a href="#">Фитнес-браслеты</a></li>
-            <li class="catalog-list__item"><a href="#">Умные часы</a></li>
-            <li class="catalog-list__item"><a href="#">Квадрокоптеры</a></li>
+
+        <nav class="main-nav">
+          <ul class="main-nav__list main-list">
+            <li class="main-list__item">
+              <a href="catalog.html">Каталог товаров</a>
+              <!-- Выпадающее меню -->
+              <ul class="catalog-list">
+                <li>
+                  <ul>
+                    <li class="catalog-list__item"><a href="#">Виртуальная реальность</a></li>
+                    <li class="catalog-list__item"><a href="#">Моноподы для селфи</a></li>
+                    <li class="catalog-list__item"><a href="#">Экшен-камеры</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li class="catalog-list__item"><a href="#">Фитнес-браслеты</a></li>
+                    <li class="catalog-list__item"><a href="#">Умные часы</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <ul>
+                    <li class="catalog-list__item"><a href="#">Квадрокоптеры</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="main-list__item"><a href="#">Доставка</a></li>
+            <li class="main-list__item"><a href="#">Гарантия</a></li>
+            <li class="main-list__item"><a href="#">Контакты</a></li>
           </ul>
-        </li>
-        <li class="main-list__item"><a href="#">Доставка</a></li>
-        <li class="main-list__item"><a href="#">Гарантия</a></li>
-        <li class="main-list__item"><a href="#">Контакты</a></li>
-      </ul>
-    </nav>
+        </nav>
+      </div>
+    </div>
   </header>
 
   <main class="main-wrapper">
@@ -215,20 +232,22 @@
             </main>
 
             <footer class="page-footer">
-              <a class="page-footer__logo logo logo--footer">DEVICE</a>
+              <div class="page-footer-user-nav-wrapper">
+                <a class="page-footer__logo logo logo--footer">DEVICE</a>
 
-              <nav class="page-footer__user-nav user-nav user-nav--footer">
-                <ul class="user-nav__list nav-list">
-                  <li class="nav-list__item--footer"><a href="#">Войти</a></li>
-                  <li class="nav-list__item--footer"><a href="#">Стравнить</a></li>
-                  <li class="nav-list__item--footer"><a href="#">Корзина</a></li>
-                </ul>
-              </nav>
+                <nav class="page-footer__user-nav user-nav user-nav--footer">
+                  <ul class="user-nav__list nav-list">
+                    <li class="nav-list__item nav-list__item--footer"><a href="#">Войти</a></li>
+                    <li class="nav-list__item nav-list__item--footer"><a href="#">Стравнить</a></li>
+                    <li class="nav-list__item nav-list__item--footer"><a href="#">Корзина</a></li>
+                  </ul>
+                </nav>
+              </div>
 
-              <div class="page-footer-nav-wrapper">
+              <div class="page-footer-main-nav-wrapper">
                 <p class="page-footer__contacts">г. Москва, ул. Строителей, 15</p>
                 <nav class="page-footer__main-nav">
-                  <ul class="main-nav__list main-list">
+                  <ul class="main-nav__list main-list main-list--footer">
                     <li class="main-list__item--footer"><a href="#">Доставка</a></li>
                     <li class="main-list__item--footer"><a href="#">Гарантия</a></li>
                     <li class="main-list__item--footer"><a href="#">Контакты</a></li>
