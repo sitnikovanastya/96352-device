@@ -52,12 +52,12 @@ ul {
   position: relative;
   font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 40px;
+  line-height: 39px;
   letter-spacing: 0.2em;
   color: #000000;
   text-transform: uppercase;
-  padding: 10px 43px;
-  min-width: 190px;
+  padding: 10px 42px;
+  min-width: 135px;
   max-width: 260px;
   z-index: 1;
 }
@@ -366,6 +366,7 @@ ul {
   left: 0px;
   width: 1160px;
   display: none;
+  z-index: 3;
 }
 
 .catalog-list ul {
@@ -378,6 +379,15 @@ ul {
 }
 
 /*Слайдер*/
+.main-wrapper {
+  position: relative;
+}
+
+.slider-wrapper {
+  .position: absolute;
+  z-index: 2;
+}
+
 .slider-wrapper{
   height: 550px;
   margin: 0 auto;
@@ -385,13 +395,37 @@ ul {
   flex-direction: column;
 }
 
+.slider-wrapper::before {
+  position: absolute;
+  content: "";
+  width: 1160px;
+  height: 112px;
+  background: #f7e296;
+}
+
 .slider {
   display: flex;
+  z-index: 1;
+}
+
+.slider--first img {
+  padding-left: 90px;
+  margin-top: -10px;
 }
 
 .slider--third,
 .slider--second {
   display: none;
+}
+
+.slider__description {
+  padding-left: 126px;
+  padding-top: 43px;
+}
+
+.description p {
+  margin-top: -22px;
+  letter-spacing: 0.01em;
 }
 
 .slider__title {
@@ -402,24 +436,59 @@ ul {
   color: #000000;
 }
 
+.slider__button {
+  display: inline-block;
+  margin-top: 50px;
+  margin-top: 20px;
+}
+
 .switchers {
   display: flex;
 }
 
+.description__spec {
+  margin-top: 36px;
+}
+
+.description__spec--1cell{
+  margin-left: -2px;
+}
+
 .description__spec td{
+  min-width: 150px;
   font-family: 'gilroylight', Helvetica, sans-serif;
   font-size: 36px;
   line-height: 48px;
   color: #000000;
 }
 
+.description__spec--1cell p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -3px;
+}
+
+.description__spec--2cell p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 2px;
+}
+
+.description__spec--3cell p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: -13px;
+}
+
 .description__spec th{
+  min-width: 140px;
   font-family: 'Open Sans', Helvetica, sans-serif;
   font-weight: 300;
   font-size: 13px;
   line-height: 20px;
   letter-spacing: 0.01em;
   color: #464646;
+  text-align: left;
 }
 
 .switchers {
@@ -813,11 +882,19 @@ ul {
 
 .pagination-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
   background-color: rgba(235, 235, 235, 0.8);
   height: 70px;
   align-items: center;
+}
+
+.pagination-list li:first-child {
+  margin-right: auto;
+}
+
+.pagination-list li:last-child {
+  margin-left: auto;
 }
 
 .pagination-list__item a{
