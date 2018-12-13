@@ -96,8 +96,18 @@
 
   <main class="main-wrapper">
     <div class="page-container">
+      
+      <input class="visually-hidden" type="radio" id="slider-first" name="toggle" checked>
+      <input class="visually-hidden" type="radio" id="slider-second" name="toggle">
+      <input class="visually-hidden" type="radio" id="slider-third" name="toggle">
+      <div class="slider__switchers switchers">
+        <label for="slider-first"></label>
+        <label for="slider-second"></label>
+        <label for="slider-third"></label>
+      </div>
+
       <div class="slider-wrapper">
-        <div class="slider slider--first">
+        <div class="slider slider--first" id="slide1">
           <p class="slider__image">
             <img src="img/slider-1.png" width="384" height="481" alt="Самая длинная селфи-палка">
           </p>
@@ -122,13 +132,13 @@
                 </td>
               </tr>
               <tr>
-                <th class="description__spec--4cell">
+                <th class="description__spec--1cell-title">
                   <p>Длина палки</p>
                 </th>
-                <th class="description__spec--5cell">
+                <th class="description__spec--2cell-title">
                   <p>Вес палки</p>
                 </th>
-                <th class="description__spec--6cell">
+                <th class="description__spec--3cell-title">
                   <p>Материал</p>
                 </th>
               </tr>
@@ -136,29 +146,32 @@
           </section>
         </div>
 
-        <div class="slider slider--second">
+        <div class="slider slider--second" id="slide2">
           <p class="slider__image">
-            <!--Оказывается, я разметила все сразу-->
             <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
           </p>
           <section class="slider__description description">
-            <h2 class="slider__title">Худеем правильно!</h2>
+            <h2 class="slider__title">Худеем </br>правильно!</h2>
             <p>Мотивирующие фитнес-браслеты помогут найти в себе силы <br>
               не пропускать занятия и соблюдать диету.
             </p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="slider__button button" href="#">Подробнее</a>
             <table class= "description__spec">
               <tr>
-                <td>48 часов</td>
+                <td class="description__spec--1cell">
+                  <p>48 часов</p>
+                </td>
               </tr>
               <tr>
-                <th>без подзарядки</th>
+                <th class="description__spec--1cell-title">
+                  <p>без подзарядки</p>
+                </th>
               </tr>
             </table>
           </section>
         </div>
 
-        <div class="slider slider--third">
+        <div class="slider slider--third" id="slide3">
           <p class="slider__image">
             <img src="img/slider-3.png" width="560" height="320" alt="Квадрокоптер">
           </p>
@@ -167,31 +180,27 @@
             <p>Этот обычный, на первый взгляд, квадрокоптер оснащен <br>
               мощным лазером, замаскированным под стандартную камеру.
             </p>
-            <a class="button" href="#">Подробнее</a>
+            <a class="slider__button button" href="#">Подробнее</a>
             <table class= "description__spec">
               <tr>
-                <td>800 м</td>
-                <td>50 м</td>
+                <td class="description__spec--1cell">
+                  <p>800 м</p>
+                </td>
+                <td class="description__spec--2cell">
+                  <p>50 м</p>
+                </td>
               </tr>
               <tr>
-                <th>Дальность полета</th>
-                <th>Радиус поражения</th>
+                <th class="description__spec--1cell-title">
+                  <p>Дальность полета</p>
+                </th>
+                <th class="description__spec--2cell-title">
+                  <p>Радиус поражения</p>
+                </th>
               </tr>
             </table>
           </section>
         </div>
-
-        <ul class="slider__switchers switchers">
-          <li class="switchers__button">
-            <button class="switchers__slide-button"></button>
-          </li>
-          <li class="switchers__button">
-            <button class="switchers__slide-button"></button>
-          </li>
-          <li class="switchers__button">
-            <button class="switchers__slide-button"></button>
-          </li>
-        </ul>
       </div>
 
       <section class="featured-catalog">
