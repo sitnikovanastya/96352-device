@@ -606,14 +606,6 @@ ul {
   cursor: pointer;
 }
 
-.switchers__slide:hover {
-  width: 4px;
-  height: 4px;
-  border: 1px solid #000000;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
 /*Популярные категории*/
 .featured-catalog {
   margin-top: 45px;
