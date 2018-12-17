@@ -421,7 +421,7 @@
             <div class="contacts__map">
               <img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу ул. Строителей, Санкт-Петербург">
             </div>
-            <a class="contacts__button button" href="#">Напишите нам</a>
+            <a class="contacts__button button" href="writeus.html">Напишите нам</a>
           </section>
         </div>
       </div>
@@ -515,15 +515,15 @@
       <form class="modal-contact__form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="name">Ваше имя:</label>
-          <input class="contact-form__text" id="name" type="text" placeholder="Имя Фамилия">
+          <input class="contact-form__name" id="name" name="user-name" type="text" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="email">Ваш e-mail:</label>
-          <input class="contact-form__text" id="email" type="text" placeholder="email@example.com" required>
+          <input class="contact-form__email" id="email" name="email" type="text" placeholder="email@example.com">
         </p>
         <p>
           <label for="text">Текст письма:</label>
-          <textarea class="contact-form__text" id="text" placeholder="В свободной форме"></textarea>
+          <textarea class="contact-form__comment" id="text" name="comment" placeholder="В свободной форме"></textarea>
         </p>
         <button class="contact-form__button button" type="submit">
           Отправить
@@ -540,13 +540,15 @@
         Как до нас добраться
       </h2>
       <p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2sua!4v1544663443607" width="965" height="560" frameborder="0" style="border:0" allowfullscreen>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779976!2d37.52742931592807!3d55.687030980535816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsINCg0L7RgdGB0LjRjywgMTE5MzEx!5e0!3m2!1sru!2sua!4v1544663443607" width="965" height="560" style="border:0" allowfullscreen>
         </iframe>
       </p>
-      <button class="modal-map_close modal-close" type="button">
+      <button class="modal-map__close modal-close" type="button">
         Закрыть
       </button>
     </section>
+
+    <script src="js/script.js" async></script>
 
   </body>
   </html>

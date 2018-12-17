@@ -58,6 +58,7 @@ img {
   padding: 0 42px;
   min-width: 135px;
   max-width: 260px;
+  vertical-align: top;
 }
 
 .button:hover {
@@ -1548,6 +1549,13 @@ img {
   min-width: 90px;
   padding: 0 40px;
   z-index: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.filters__form > .button:hover {
+  background: #f0c52e;
 }
 
 .product-info__price {
@@ -1813,10 +1821,12 @@ img {
   top: 120px;
   left: 50%;
   margin-left: -480px;
+  vertical-align: top;
 }
 
 .modal-contact__form p{
   display: inline-block;
+  vertical-align: top;
 }
 
 .modal-contact__form input,
@@ -1864,6 +1874,7 @@ img {
   border: 0;
   padding: 0px 34px;
   margin-top: 15px;
+  cursor: pointer;
 }
 
 .modal-contact__form p:nth-child(2) {
@@ -1879,6 +1890,10 @@ img {
   display: block;
   margin-top: 4px;
   margin-bottom: 12px;
+}
+
+.form-invalid {
+  background: red;
 }
 
 .modal-close {
@@ -1931,4 +1946,34 @@ img {
 
 .modal-map p {
   margin: 0;
+}
+
+@keyframes swing {
+  0% {transform: translateX(2000px); }
+  60% {transform: translateX(-200px); }
+  100% {transform: translateX(0px); }
+}
+
+.modal-show {
+  display: block;
+  animation-duration: 0.5s;
+  animation-name: swing;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+
+  }
 }
