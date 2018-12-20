@@ -9,7 +9,6 @@ var writeUsEmail = writeUsPopup.querySelector("[name=email]");
 var writeUsComment = writeUsPopup.querySelector("[name=comment]");
 var writeUsNameStorage = localStorage.getItem("writeUsName");
 var writeUsEmailStorage = localStorage.getItem("writeUsEmail");
-var inputName = writeUsPopup.querySelector("contact-form__name");
 
 var isStorageSupport = true;
 var storage = "";
@@ -44,6 +43,8 @@ writeUsForm.addEventListener("submit", function (evt) {
   if (!writeUsName.value || !writeUsEmail.value || !writeUsComment.value) {
     evt.preventDefault();
     console.log("Пожалуйста, заполните все поля");
+    writeUsPopup.classList.remove("modal-error");
+    writeUsPopup.offsetWidth;
     writeUsPopup.classList.add("modal-error");
   } else {
     if (isStorageSupport) {
@@ -53,18 +54,60 @@ writeUsForm.addEventListener("submit", function (evt) {
   }
 });
 
-writeUsForm.addEventListener("submit", function (evt) {
-  if (!writeUsName.value) {
-    inputName.classList.add("form-invalid");
-  }
-});
-
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (writeUsPopup.classList.contains("modal-show")) {
       evt.preventDefault();
       writeUsPopup.classList.remove("modal-show");
     }
+  }
+});
+
+closeWriteUsPopup.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  writeUsPopup.classList.remove("modal-error");
+  writeUsName.classList.remove("contact-form__item--invalid");
+  writeUsEmail.classList.remove("contact-form__item--invalid");
+  writeUsComment.classList.remove("contact-form__item--invalid");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    writeUsPopup.classList.remove("modal-error");
+    writeUsName.classList.remove("contact-form__item--invalid");
+    writeUsEmail.classList.remove("contact-form__item--invalid");
+    writeUsComment.classList.remove("contact-form__item--invalid");
+  }
+});
+
+
+writeUsForm.addEventListener("submit", function (evt) {
+  if (!writeUsName.value) {
+    writeUsName.classList.add("contact-form__item--invalid");
+  }
+  if (!writeUsEmail.value) {
+    writeUsEmail.classList.add("contact-form__item--invalid");
+  }
+  if (!writeUsComment.value) {
+    writeUsComment.classList.add("contact-form__item--invalid");
+  }
+});
+
+writeUsName.addEventListener("click", function(evt) {
+  if (writeUsName.classList.contains("contact-form__item--invalid")) {
+      writeUsName.classList.remove("contact-form__item--invalid");
+  }
+});
+
+writeUsEmail.addEventListener("click", function(evt) {
+  if (writeUsEmail.classList.contains("contact-form__item--invalid")) {
+      writeUsEmail.classList.remove("contact-form__item--invalid");
+  }
+});
+
+writeUsComment.addEventListener("click", function(evt) {
+  if (writeUsComment.classList.contains("contact-form__item--invalid")) {
+      writeUsComment.classList.remove("contact-form__item--invalid");
   }
 });
 
