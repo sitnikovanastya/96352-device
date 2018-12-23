@@ -1067,14 +1067,6 @@ img {
   fill: #b5931c;
 }
 
-.footer-nav-list__item:focus a,
-.footer-nav-list__item:active a,
-.footer-nav-list__item:focus path,
-.footer-nav-list__item:active path{
-  color: rgba(255, 255, 255, 0.3);
-  fill: #7e6d31;
-}
-
 .main-list__item--footer a{
   color: #ffffff;
 }
@@ -1186,7 +1178,7 @@ img {
 }
 
 .catalog {
-  width: 830px;
+  width: 66%;
 }
 
 .catalog-title-wrapper {
@@ -1238,8 +1230,16 @@ img {
 /*Карточка товаров*/
 
 .sorting-wrapper {
-  display: flex;
+  background: #ebebeb;
+  min-height: 70px;
 }
+
+.sorting-nav-wapper {
+  display: flex;
+  justify-content: space-between;
+  width: 835px;
+}
+
 
 .sorting-list__item {
   margin-left: 30px;
@@ -1277,10 +1277,6 @@ img {
   margin-top: 10px;
 }
 
-.catalog {
-  flex-grow: 1;
-}
-
 .products {
   margin-left: 72px;
   margin-top: 55px;
@@ -1292,6 +1288,7 @@ img {
   flex-wrap: wrap;
   padding-left: 0;
   margin: 0;
+  width: 760px;
 }
 
 .product-info:hover.product-info-container{
@@ -1370,11 +1367,11 @@ img {
   line-height: 40px;
   letter-spacing: 0.01em;
   background-color: #efefef;
-  min-width: 330px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   z-index: 0;
+  width: 100%;
 }
 
 .filters__header,
@@ -1390,15 +1387,15 @@ img {
 }
 
 .filers-header-container {
-  min-width: 540px;
   min-height: 70px;
   margin-bottom: 70px;
+  width: 100%;
+  background-color: #dcdcdc;
+  padding-right: 177px;
 }
 
 .filters__header {
-  padding-right: 177px;
   text-align: right;
-  background-color: #dcdcdc;
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 23px;
@@ -1419,7 +1416,7 @@ img {
 
 .filter-wrapper {
   display: flex;
-  min-width: 470px;
+  width: 34%;
 }
 
 .filters-container {
@@ -1613,11 +1610,6 @@ img {
   color: rgba(0, 0, 0, 0.2);
 }
 
-.sorting-wrapper {
-  background: #ebebeb;
-  min-height: 70px;
-}
-
 .color__list {
   border-bottom: 2px solid #000000;
   padding-bottom: 31px;
@@ -1718,14 +1710,14 @@ img {
   position: relative;
   list-style: none;
   padding-left: 0;
+  margin-left: -232px;
 }
 
 .sorting-button-wrapper {
   display: flex;
   justify-content: space-between;
-  min-width: 40px;
+  min-width: 42px;
   margin-top: 18px;
-  margin-left: 234px;
 }
 
 .sorting-list__item a{
