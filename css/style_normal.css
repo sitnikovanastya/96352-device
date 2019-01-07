@@ -1827,10 +1827,6 @@ img {
   cursor: pointer;
 }
 
-.filters__form > .button:hover {
-  background: #f0c52e;
-}
-
 .product-info__price {
   font-size: 16px;
   line-height: 24px;
