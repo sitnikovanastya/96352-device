@@ -981,7 +981,6 @@ img {
   max-height: 180px;
 }
 
-.service-list__item .button:focus,
 .service-button.button-active {
   color: #f7e184;
 }
