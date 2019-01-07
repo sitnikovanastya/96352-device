@@ -142,3 +142,40 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+/*Переменные для слайдера*/
+var switchers = document.querySelectorAll(".slider-button");
+var slides = document.querySelectorAll(".slider");
+
+/*Слайдер главный*/
+for (var i = 0; i < switchers.length; i++) {
+  switchers[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    for (var j = 0; j < slides.length; j++) {
+      switchers[j].classList.remove("active");
+      evt.currentTarget.classList.add("active");
+      slides[j].classList.remove("active");
+      if (evt.currentTarget === switchers[j]) {
+        slides[j].classList.add("active");
+      }
+    }
+  });
+}
+
+/*Слайдер сервис*/
+var serviceButton = document.querySelectorAll(".service-button");
+var serviceSlides = document.querySelectorAll(".service__slider");
+
+for (var i = 0; i < serviceButton.length; i++) {
+  serviceButton[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    for (var j = 0; j < serviceButton.length; j++) {
+      serviceButton[j].classList.remove("button-active");
+      evt.currentTarget.classList.add("button-active");
+      serviceSlides[j].classList.remove("service-active");
+      if (evt.currentTarget === serviceButton[j]) {
+        serviceSlides[j].classList.add("service-active");
+      }
+    }
+  });
+}

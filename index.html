@@ -124,7 +124,7 @@
             <p class="slider__image">
               <img src="img/slider-1.png" width="384" height="481" alt="Самая длинная селфи-палка">
             </p>
-            <section class="slider__description description">
+            <div class="slider__description description">
               <h2 class="slider__title">Делай селфи,
                 <br>как Бен Стиллер!
               </h2>
@@ -154,13 +154,13 @@
                   </th>
                 </tr>
               </table>
-            </section>
+            </div>
           </li>
           <li class="slider slider--second" id="slide2">
             <p class="slider__image">
               <img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
             </p>
-            <section class="slider__description description">
+            <div class="slider__description description">
               <h2 class="slider__title">Худеем <br>правильно!</h2>
               <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
               </p>
@@ -177,13 +177,13 @@
                   </th>
                 </tr>
               </table>
-            </section>
+            </div>
           </li>
           <li class="slider slider--third" id="slide3">
             <p class="slider__image">
               <img src="img/slider-3.png" width="525" height="320" alt="Квадрокоптер">
             </p>
-            <section class="slider__description description">
+            <div class="slider__description description">
               <h2 class="slider__title">Порхает как бабочка, жалит как пчела!</h2>
               <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
               </p>
@@ -206,12 +206,12 @@
                   </th>
                 </tr>
               </table>
-            </section>
+            </div>
           </li>
         </ul>
         <ul class="slider__switchers switchers">
           <li>
-            <button class="slider-button">Первый слайд</button>
+            <button class="slider-button active">Первый слайд</button>
           </li>
           <li>
             <button class="slider-button">Второй слайд</button>
@@ -372,32 +372,29 @@
     </section>
   </div>
   <section class="service">
-    <input class="visually-hidden" type="radio" id="service-first" name="service" checked>
-    <input class="visually-hidden" type="radio" id="service-second" name="service">
-    <input class="visually-hidden" type="radio" id="service-third" name="service">
     <div class="service-wrapper">
       <nav class="service-nav">
         <ul class="service-nav__list service-list">
           <li class="service-list__item">
-            <label class="button" for="service-first">Доставка</label>
+            <button class="button service-button button-active">Доставка</button>
           </li>
           <li class="service-list__item">
-            <label class="button" for="service-second">Гарантия</label>
+            <button class="button service-button">Гарантия</button>
           </li>
           <li class="service-list__item">
-            <label class="button" for="service-third">Кредит</label>
+            <button class="button service-button">Кредит</button>
           </li>
         </ul>
       </nav>
-      <div class="service__slider service__slider--first" id=service1>
+      <div class="service__slider service__slider--first service-active">
         <h2 class="service-slider__header content-title">Доставка</h2>
         <p class="service-slider__description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
       </div>
-      <div class="service__slider service__slider--second" id=service2>
+      <div class="service__slider service__slider--second">
         <h2 class="service-slider__header content-title">Гарантия</h2>
         <p class="service-slider__description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.Товар, не дом, конечно же.</p>
       </div>
-      <div class="service__slider service__slider--third" id=service3>
+      <div class="service__slider service__slider--third">
         <h2 class="service-slider__header content-title">Кредит</h2>
         <p class="service-slider__description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодныеnусловия кредита. Выгодные для нашего банка, разумеется.</p>
       </div>
