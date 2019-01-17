@@ -124,6 +124,7 @@ var mapPopup = document.querySelector(".modal-map");
 var mapClose = mapPopup.querySelector(".modal-close");
 
 /*Карта*/
+
 map.addEventListener("click", function (evt) {
   evt.preventDefault();
   mapPopup.classList.add("modal-show");
@@ -144,16 +145,18 @@ window.addEventListener("keydown", function (evt) {
 });
 
 /*Переменные для слайдера*/
-var switchers = document.querySelectorAll(".slider-button");
+
+var switchers = document.querySelectorAll(".switchers__button");
 var slides = document.querySelectorAll(".slider");
 
 /*Слайдер главный*/
+
 for (var i = 0; i < switchers.length; i++) {
   switchers[i].addEventListener("click", function (evt) {
     evt.preventDefault();
     for (var j = 0; j < slides.length; j++) {
-      switchers[j].classList.remove("active");
-      evt.currentTarget.classList.add("active");
+      switchers[j].classList.remove("active-switchers");
+      evt.currentTarget.classList.add("active-switchers");
       slides[j].classList.remove("active");
       if (evt.currentTarget === switchers[j]) {
         slides[j].classList.add("active");
@@ -163,6 +166,7 @@ for (var i = 0; i < switchers.length; i++) {
 }
 
 /*Слайдер сервис*/
+
 var serviceButton = document.querySelectorAll(".service-button");
 var serviceSlides = document.querySelectorAll(".service__slider");
 
